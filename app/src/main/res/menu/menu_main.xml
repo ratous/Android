@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/articles"
+        android:title="Articles">
+        <menu android:id="@+id/sousmenu">
+            <item android:id="@+id/ajout"
+                android:title="Ajouter" />
+            <item android:id="@+id/liste"
+                android:title="Liste" />
+            <item android:id="@+id/maj"
+                android:title="Modifier" />
+        </menu>
+    </item>
+    <item android:id="@+id/quitter"
+        android:title="Menu"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"/>
+</menu>
