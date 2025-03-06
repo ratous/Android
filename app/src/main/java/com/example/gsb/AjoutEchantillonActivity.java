@@ -69,7 +69,6 @@ public class AjoutEchantillonActivity extends AppCompatActivity {
                 Toast.makeText(this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
                 return;
             }
-
             // Créer un nouvel échantillon
             Echantillon nouvelEchantillon = new Echantillon(code, libelle, quantite);
 
@@ -77,14 +76,17 @@ public class AjoutEchantillonActivity extends AppCompatActivity {
             BdAdapter db = new BdAdapter(this);
             db.open();
 
-            // Insérer l'échantillon
-            db.insererEchantillon(nouvelEchantillon);
+//            if (!code.equals(db.getCodeEchantillon(code))){
 
-            // Fermer la base de données
-            db.close();
+                // Insérer l'échantillon
+                db.insererEchantillon(nouvelEchantillon);
 
-            Toast.makeText(this, "Échantillon ajouté", Toast.LENGTH_SHORT).show();
-            finish();
+                // Fermer la base de données
+                db.close();
+
+                Toast.makeText(this, "Échantillon ajouté", Toast.LENGTH_SHORT).show();
+                finish();
+//            }
         });
         Button buttonQuitter = (Button)findViewById(R.id.buttonQuitter);
         buttonQuitter.setOnClickListener(new View.OnClickListener() {

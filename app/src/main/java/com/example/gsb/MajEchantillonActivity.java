@@ -89,7 +89,7 @@ public class MajEchantillonActivity extends AppCompatActivity {
             Toast.makeText(this, "Échantillon supprimé", Toast.LENGTH_SHORT).show();
         });
 
-        // Gestion du clic sur le bouton "Ajouter"
+        // Gestion du clic sur le bouton "ajouter"
         btnAjouter.setOnClickListener(v -> {
             String code = edtCode.getText().toString();
             String libelle = edtLibelle.getText().toString();

@@ -18,8 +18,8 @@ public class CreateBdEchantillon extends SQLiteOpenHelper {
 
     // Requête SQL pour la création de la table
     private static final String CREATE_BDD = "CREATE TABLE " + TABLE_ECHANT + "" +
-            "("+COL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + COL_CODE + " TEXT NOT NULL, "
+            "("+COL_ID+" INTEGER PRIMARY KEY NOT NULL,"
+            + COL_CODE + " TEXT PRIMARY KEY NOT NULL UNIQUE,"
             + COL_LIB + " TEXT NOT NULL, "
             + COL_STOCK + " TEXT NOT NULL);";
 

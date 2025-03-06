@@ -2,7 +2,7 @@ package com.example.gsb;
 
 // Classe représentant un échantillon avec un code, un libellé et une quantité en stock
 public class Echantillon {
-    protected String code; // Code unique de l'échantillon
+    protected static String code; // Code unique de l'échantillon
     protected String libelle; // Libellé (nom) de l'échantillon
     protected String quantiteStock; // Quantité en stock sous forme de chaîne de caractères
 
@@ -36,7 +36,7 @@ public class Echantillon {
     }
 
     // Getter pour récupérer le code de l'échantillon
-    public String getCode() {
+    public static String getCode() {
         return code;
     }
 
